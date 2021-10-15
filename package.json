@@ -1,0 +1,15 @@
+{
+  "name": "curpcalculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "npx tailwindcss -c .\\tailwind.config.js -i .\\tailwind.css -o .\\styles.css --jit --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.4"
+  }
+}
