@@ -10,54 +10,66 @@
     <title>CURP</title>
 </head>
 
-<body class="w-screen h-screen p-10 text-white bg-gradient-to-br from-blue-900 via-purple-800 to-purple-900 font-poppins">
-    <h2 class="tracking-wider">CURP Generator</h2>
-    <div class="flex flex-col h-auto space-y-2 w-72">
-        <label for="name">Nombre</label><input type="text" class="input-solid" id="name" />
-        <label for="fstLastName">Apellido Paterno</label><input type="text" class="input-solid" id="fstLastName" />
-        <label for="scnLastName">Apellido Materno</label><input type="text" class="input-solid" id="scnLastName" />
-        <label for="sex">Sexo</label><select class="input-solid" id="sex">
-            <option value="H">H</option>
-            <option value="M">M</option>
-        </select>
-        <label for="bornDate">Fecha de nacimiento</label><input type="date" class="input-solid" id="bornDate" />
-        <label for="state">Estado de nacimiento</label><select class="input-solid" id="state">
-            <option value="AS">AGUASCALIENTES</option>
-            <option value="BC">BAJA CALIFORNIA</option>
-            <option value="BS">BAJA CALIFORNIA SUR</option>
-            <option value="CC">CAMPECHE</option>
-            <option value="CS">CHIAPAS</option>
-            <option value="CH">CHIHUAHUA</option>
-            <option value="CL">COAHUILA</option>
-            <option value="CM">COLIMA</option>
-            <option value="DF">DISTRITO FEDERAL</option>
-            <option value="DG">DURANGO</option>
-            <option value="GT">GUANAJUATO</option>
-            <option value="GR">GUERRERO</option>
-            <option value="HG">HIDALGO</option>
-            <option value="JC">JALISCO</option>
-            <option value="MC">MEXICO</option>
-            <option value="MS">MORELOS</option>
-            <option value="MN">MICHOACAN</option>
-            <option value="NT">NAYARIT</option>
-            <option value="NL">NUEVO LEON</option>
-            <option value="OC">OAXACA</option>
-            <option value="PL">PUEBLA</option>
-            <option value="QT">QUERETARO</option>
-            <option value="QR">QUINTANA ROO</option>
-            <option value="SP">SAN LUIS POTOSI</option>
-            <option value="SL">SINALOA</option>
-            <option value="SR">SONORA</option>
-            <option value="TC">TABASCO</option>
-            <option value="TS">TAMAULIPAS</option>
-            <option value="TL">TLAXCALA</option>
-            <option value="VZ">VERACRUZ</option>
-            <option value="YN">YUCATAN</option>
-            <option value="ZS">ZACATECAS</option>
-            <option value="NE">EXTRANJERO</option>
-        </select>
-    </div>
-    <button class="mt-4 font-bold text-blue-800 bg-white btn" onclick="calc()" >Calculate</button>
+<body
+    class="w-screen h-auto min-h-screen p-10 text-white bg-gradient-to-br from-blue-900 via-purple-800 to-purple-900 font-poppins">
+    <main class="flex flex-col gap-4 sm:flex sm:flex-row sm:justify-items-stretch">
+        <div class="w-full">
+            <h2 class="tracking-wider">CURP Generator</h2>
+            <div class="flex flex-col w-full h-auto space-y-2">
+                <label for="name">Nombre</label><input type="text" class="input-solid" id="name" />
+                <label for="fstLastName">Apellido Paterno</label><input type="text" class="input-solid"
+                    id="fstLastName" />
+                <label for="scnLastName">Apellido Materno</label><input type="text" class="input-solid"
+                    id="scnLastName" />
+                <label for="sex">Sexo</label><select class="input-solid" id="sex">
+                    <option value="H">H</option>
+                    <option value="M">M</option>
+                </select>
+                <label for="bornDate">Fecha de nacimiento</label><input type="date" class="input-solid" id="bornDate" />
+                <label for="state">Estado de nacimiento</label><select class="input-solid" id="state">
+                    <option value="AS">AGUASCALIENTES</option>
+                    <option value="BC">BAJA CALIFORNIA</option>
+                    <option value="BS">BAJA CALIFORNIA SUR</option>
+                    <option value="CC">CAMPECHE</option>
+                    <option value="CS">CHIAPAS</option>
+                    <option value="CH">CHIHUAHUA</option>
+                    <option value="CL">COAHUILA</option>
+                    <option value="CM">COLIMA</option>
+                    <option value="DF">DISTRITO FEDERAL</option>
+                    <option value="DG">DURANGO</option>
+                    <option value="GT">GUANAJUATO</option>
+                    <option value="GR">GUERRERO</option>
+                    <option value="HG">HIDALGO</option>
+                    <option value="JC">JALISCO</option>
+                    <option value="MC">MEXICO</option>
+                    <option value="MS">MORELOS</option>
+                    <option value="MN">MICHOACAN</option>
+                    <option value="NT">NAYARIT</option>
+                    <option value="NL">NUEVO LEON</option>
+                    <option value="OC">OAXACA</option>
+                    <option value="PL">PUEBLA</option>
+                    <option value="QT">QUERETARO</option>
+                    <option value="QR">QUINTANA ROO</option>
+                    <option value="SP">SAN LUIS POTOSI</option>
+                    <option value="SL">SINALOA</option>
+                    <option value="SR">SONORA</option>
+                    <option value="TC">TABASCO</option>
+                    <option value="TS">TAMAULIPAS</option>
+                    <option value="TL">TLAXCALA</option>
+                    <option value="VZ">VERACRUZ</option>
+                    <option value="YN">YUCATAN</option>
+                    <option value="ZS">ZACATECAS</option>
+                    <option value="NE">EXTRANJERO</option>
+                </select>
+            </div>
+            <button class="mt-4 font-bold text-blue-800 bg-white btn" onclick="calc()">Calculate</button>
+        </div>
+        <div class="w-full">
+            <h2>Result</h2>
+            <p id="result"></p>
+        </div>
+    </main>
 </body>
 <script src="./app.js"></script>
+
 </html>

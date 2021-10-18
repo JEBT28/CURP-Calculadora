@@ -8,7 +8,7 @@ const calc = () => {
 
     let curp = calculateCURP({ name, fstLastName, scnLastName, sex, year, month, day, state })
 
-    alert(curp);
+    document.getElementById("result").innerHTML=`${curp}XX`;
 }
 
 const calculateCURP = ({
