@@ -4,12 +4,16 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "npx tailwindcss -c .\\tailwind.config.js -i .\\tailwind.css -o .\\styles.css --jit --watch"
+    "start": "npx tailwindcss -c .\\tailwind.config.js -i .\\tailwind.css -o .\\styles.css --jit --watch",
+    "test":" jest ./app.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4"
+  },
+  "devDependencies": {
+    "jest": "^27.3.0"
   }
 }
