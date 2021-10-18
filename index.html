@@ -15,18 +15,18 @@
     <main class="flex flex-col gap-4 sm:flex sm:flex-row sm:justify-items-stretch">
         <div class="w-full">
             <h2 class="tracking-wider">CURP Generator</h2>
-            <div class="flex flex-col w-full h-auto space-y-2">
-                <label for="name">Nombre</label><input type="text" class="input-solid" id="name" />
+            <form class="flex flex-col w-full h-auto space-y-2">
+                <label for="name">Nombre</label><input type="text" class="input-solid" id="name" tabindex="1" />
                 <label for="fstLastName">Apellido Paterno</label><input type="text" class="input-solid"
-                    id="fstLastName" />
+                    id="fstLastName" tabindex="2"/>
                 <label for="scnLastName">Apellido Materno</label><input type="text" class="input-solid"
-                    id="scnLastName" />
-                <label for="sex">Sexo</label><select class="input-solid" id="sex">
+                    id="scnLastName" tabindex="4"/>
+                <label for="sex">Sexo</label><select class="input-solid" id="sex" tabindex="4">
                     <option value="H">H</option>
                     <option value="M">M</option>
                 </select>
-                <label for="bornDate">Fecha de nacimiento</label><input type="date" class="input-solid" id="bornDate" />
-                <label for="state">Estado de nacimiento</label><select class="input-solid" id="state">
+                <label for="bornDate">Fecha de nacimiento</label><input type="date" class="input-solid" id="bornDate" tabindex="5"/>
+                <label for="state">Estado de nacimiento</label><select class="input-solid" id="state" tabindex="6">
                     <option value="AS">AGUASCALIENTES</option>
                     <option value="BC">BAJA CALIFORNIA</option>
                     <option value="BS">BAJA CALIFORNIA SUR</option>
@@ -61,7 +61,7 @@
                     <option value="ZS">ZACATECAS</option>
                     <option value="NE">EXTRANJERO</option>
                 </select>
-            </div>
+            </form>
             <button class="mt-4 font-bold text-blue-800 bg-white btn" onclick="calc()">Calculate</button>
         </div>
         <div class="w-full">
